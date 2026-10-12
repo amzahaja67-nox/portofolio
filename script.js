@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const setMenu = (open) => {
         mobileNav.hidden = !open;
+        mobileNav.classList.remove("is-opening");
+
+        if (open && !reducedMotion) {
+          requestAnimationFrame(() => mobileNav.classList.add("is-opening"));
+        }
+
         menuButton.setAttribute("aria-expanded", String(open));
         menuButton.setAttribute("aria-label", open ? "Tutup menu navigasi" : "Buka menu navigasi");
         menuButton.querySelector("use").setAttribute("href", open ? "#i-close" : "#i-menu");
