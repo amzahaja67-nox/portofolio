@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js"></script>
 </head>
-<body>
+<body data-page="home">
   <a class="skip-link" href="#main-content">Langsung ke konten</a>
 
   <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -52,29 +52,27 @@
 
   <header class="site-header" id="site-header">
     <div class="container-wide nav-inner">
-      <a class="brand-lockup" href="#home" aria-label="Hamzah Kholilul Azka, beranda">
+      <a class="brand-lockup" href="index.html" aria-label="Hamzah Kholilul Azka, beranda">
         <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M11 12v16m0-8h10m0-8v16M25 12v16m0-8 8-8m-8 8 8 8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="31" cy="9" r="2.5" fill="#7dd3fc"/></svg></span>
         <span class="brand-name"><strong>Hamzah Kholilul Azka</strong><span>Portofolio</span></span>
       </a>
       <nav class="desktop-nav" aria-label="Navigasi utama">
-        <a class="nav-link" href="#about">Tentang</a>
-        <a class="nav-link" href="#education">Pendidikan</a>
-        <a class="nav-link" href="#skills">Keahlian</a>
-        <a class="nav-link" href="#projects">Proyek</a>
-        <a class="nav-link" href="#certificates">Sertifikat</a>
+        <a class="nav-link" data-nav="profil" href="profil.html">Profil</a>
+        <a class="nav-link" data-nav="keahlian" href="keahlian.html">Keahlian</a>
+        <a class="nav-link" data-nav="proyek" href="proyek.html">Proyek</a>
+        <a class="nav-link" data-nav="sertifikat" href="sertifikat.html">Sertifikat</a>
       </nav>
-      <a class="header-cta desktop-contact" href="#contact">Kontak <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+      <a class="header-cta desktop-contact" href="kontak.html">Kontak <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
       <button type="button" class="mobile-menu-button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-navigation" id="menu-toggle">
         <svg aria-hidden="true"><use href="#i-menu"/></svg>
       </button>
     </div>
     <nav id="mobile-navigation" class="mobile-nav" aria-label="Navigasi seluler" hidden>
-      <a href="#about">Tentang</a>
-      <a href="#education">Pendidikan</a>
-      <a href="#skills">Keahlian</a>
-      <a href="#projects">Proyek</a>
-      <a href="#certificates">Sertifikat</a>
-      <a href="#contact">Kontak <svg class="nav-contact-icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+      <a data-nav="profil" href="profil.html">Profil</a>
+      <a data-nav="keahlian" href="keahlian.html">Keahlian</a>
+      <a data-nav="proyek" href="proyek.html">Proyek</a>
+      <a data-nav="sertifikat" href="sertifikat.html">Sertifikat</a>
+      <a data-nav="kontak" href="kontak.html">Kontak <svg class="nav-contact-icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
     </nav>
   </header>
 
@@ -91,8 +89,8 @@
           </p>
           <p class="hero-description">Saya suka membuat hal digital yang simpel dan berguna. Saat ini, saya belajar pengembangan web, UI/UX, dan machine learning.</p>
           <div class="hero-actions">
-            <a class="button-primary" href="#projects">Lihat proyek <svg aria-hidden="true"><use href="#i-arrow-down-right"/></svg></a>
-            <a class="button-secondary" href="#contact">Hubungi saya <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            <a class="button-primary" href="proyek.html">Lihat proyek <svg aria-hidden="true"><use href="#i-arrow-down-right"/></svg></a>
+            <a class="button-secondary" href="kontak.html">Hubungi saya <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
           </div>
           <div class="hero-motto"><span class="hero-motto-rule" aria-hidden="true"></span><p><em>“Mengubah ide jadi nyata.”</em></p></div>
           <div class="hero-scroll-note" aria-hidden="true"><span></span>Gulir untuk melihat</div>
@@ -187,7 +185,7 @@
           <div class="reveal" data-delay="70"><article class="project-card"><div class="project-visual project-visual--landing" aria-hidden="true"><div class="project-art-label"><svg><use href="#i-code"/></svg>IDE PROYEK / 02</div><div class="mock-landing"><div class="mock-landing-top"><span class="mock-landing-mark"></span><span>ABOUT&nbsp;&nbsp;&nbsp; WORK&nbsp;&nbsp;&nbsp; CONTACT</span></div><div class="mock-landing-title">MAKE IT<br>MATTER.</div><div class="mock-landing-copy"></div><div class="mock-landing-button"></div></div></div><div class="project-content"><div class="project-meta"><span class="project-category">Latihan front-end</span><span class="project-number">02 / 03</span></div><h3>Web Experience</h3><p>Latihan membuat landing page yang rapi, mudah dipakai, dan nyaman dilihat di berbagai layar.</p><div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JavaScript</span></div></div></article></div>
           <div class="reveal" data-delay="140"><article class="project-card"><div class="project-visual project-visual--notebook" aria-hidden="true"><div class="project-art-label"><svg><use href="#i-code"/></svg>IDE PROYEK / 03</div><div class="mock-notebook"><div class="mock-notebook-copy"><span>CATATAN PYTHON</span><strong>Masih<br>belajar.</strong><i></i><i></i></div><div class="mock-notebook-chart"><svg viewBox="0 0 120 80" fill="none"><defs><linearGradient id="chart-fill" x1="60" y1="12" x2="60" y2="67" gradientUnits="userSpaceOnUse"><stop stop-color="#60A5FA"/><stop offset="1" stop-color="#DBEAFE" stop-opacity=".1"/></linearGradient></defs><path d="M6 67H116M6 15V67" stroke="#E2E8F0"/><path d="M12 57C24 52 25 42 39 46C52 50 56 27 69 32C83 37 87 17 101 22C107 24 109 18 114 12" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/><path d="M12 57C24 52 25 42 39 46C52 50 56 27 69 32C83 37 87 17 101 22C107 24 109 18 114 12V67H12V57Z" fill="url(#chart-fill)" fill-opacity=".35"/><circle cx="101" cy="22" r="3.5" fill="white" stroke="#2563EB" stroke-width="2"/></svg></div></div></div><div class="project-content"><div class="project-meta"><span class="project-category">Catatan belajar</span><span class="project-number">03 / 03</span></div><h3>ML Learning Notes</h3><p>Catatan belajar data dan machine learning dengan Python, dari konsep dasar sampai eksperimen kecil.</p><div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">Machine learning</span></div></div></article></div>
         </div>
-        <div class="project-bottom-row"><p class="projects-footnote"><svg aria-hidden="true"><use href="#i-lightbulb"/></svg>Ini masih berupa konsep yang ingin saya kembangkan.</p><a class="projects-cta" href="#contact">Ada ide? Mari ngobrol <svg aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+        <div class="project-bottom-row"><p class="projects-footnote"><svg aria-hidden="true"><use href="#i-lightbulb"/></svg>Ini masih berupa konsep yang ingin saya kembangkan.</p><a class="projects-cta" href="kontak.html">Ada ide? Mari ngobrol <svg aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
       </div>
     </section>
 
