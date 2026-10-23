@@ -23,6 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const target = card.querySelector(".skill-symbol");
         if (icon && target) target.innerHTML = icon;
       });
+      const interestIcons = {
+        "Pengembangan web": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4m8-8 4 4-4 4m-3-12-2 16"/></svg>',
+        "UI/UX": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18h1.2a2 2 0 0 0 1.4-3.4 1.7 1.7 0 0 1 1.2-2.9H18a3 3 0 0 0 3-3A9 9 0 0 0 12 3Z"/><circle cx="7.5" cy="10" r=".8"/><circle cx="11" cy="7" r=".8"/><circle cx="16" cy="8.5" r=".8"/></svg>',
+        "Machine learning": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5a3 3 0 0 0-5.8-1A3.5 3.5 0 0 0 4 10a3.5 3.5 0 0 0 1 6.3A3.5 3.5 0 0 0 9 21c1.3 0 2.3-.7 3-1.7M12 5a3 3 0 0 1 5.8-1A3.5 3.5 0 0 1 20 10a3.5 3.5 0 0 1-1 6.3A3.5 3.5 0 0 1 15 21c-1.3 0-2.3-.7-3-1.7M12 5v14M8 9c1.2 0 2 .7 2 2m-4 3c1.3-.1 2.1-.8 2.4-2m7-3c-1.2 0-2 .7-2 2m4 3c-1.3-.1-2.1-.8-2.4-2"/></svg>'
+      };
+      document.querySelectorAll(".interest-stack-card").forEach((card) => {
+        const name = card.querySelector(".interest-stack-copy strong")?.textContent.trim();
+        const icon = interestIcons[name];
+        const target = card.querySelector(".interest-stack-icon");
+        if (icon && target) target.innerHTML = icon;
+      });
       const desktopNav = document.querySelector(".desktop-nav");
       if (desktopNav && !desktopNav.querySelector('[data-nav="home"]')) {
         const homeLink = document.createElement("a");
